@@ -1,11 +1,15 @@
 This is our proposal!
 
 Proposal 1
-Aiming 
+The web application will serve as a recommendation tool for people going on dates or any other event. Using a picture posted by
+the user, the web app will send the image to Google Vision API to detect and return the emotions detected on that particular 
+person. The web app will then send these emotions to the Spotify API and Webknox Jokes API to obtain recommendations on the
+appropriate music or joke.
 
 APIs:
 Google Vision API 
 Spotify API
+Webknox Jokes API
 
 
 
