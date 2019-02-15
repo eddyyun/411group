@@ -1,7 +1,21 @@
 This is our proposal!
 
+Proposal 1
+Aiming 
+
+APIs:
+Google Vision API 
+Spotify API
 
 
 
 Proposal 2
-We aim to design a web application that takes in a user’s YouTube search/watch history and designs a weekly or monthly Spotify playlist based on these searches that is delivered to the user through their Spotify account. As many people already use YouTube to listen to music or watch music videos, it would be an efficient way for the user to explore more music from the same or similar artists. When dealing with non-music videos, we will consider the video description, video tags, key words and video categories to build the playlist. 
+We aim to design a web application that takes in a user’s YouTube search/watch history and designs a weekly or monthly Spotify
+playlist based on these searches that is delivered to the user through their Spotify account. As many people already use 
+YouTube to listen to music or watch music videos, it would be an efficient way for the user to explore more music from the
+same or similar artists. When dealing with non-music videos, we will consider the video description, video tags, key words
+and video categories to build the playlist. 
+
+APIs:
+Youtube Data API
+Spotify API
