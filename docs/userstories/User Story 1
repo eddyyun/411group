@@ -1,7 +1,7 @@
 USER STORY 1
 
 Story: After logging in (Fail1), user wants to find out their date's mood. Ideally, user clicks a button which allows them to
-take a photo (Fail2). User confirms the upload and the app will return their date's mood.
+take a photo (Fail2). User confirms the upload and the app will return their date's mood (Fail3).
 
 Failure points:
 
