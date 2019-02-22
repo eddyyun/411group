@@ -1,6 +1,6 @@
 USER STORY 3
 
-Story: User clicks a menu button to view user history (Fail1, Fail2). User history shows past pictures, moods and movie recommendations in
+Story: Logged in user clicks a menu button to view user history (Fail1, Fail2). User history shows past pictures, moods and movie recommendations in
 a list.
 
 Failure points:
