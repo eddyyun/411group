@@ -1,0 +1,10 @@
+USER STORY 3
+
+Story: User clicks a menu button to view user history (Fail1, Fail2). User history shows past pictures, moods and movie recommendations in
+a list.
+
+Failure points:
+
+  Fail1: No user history - show blank page with message "no user history"
+  
+  Fail2: Can't retrieve user history - error message and retry
