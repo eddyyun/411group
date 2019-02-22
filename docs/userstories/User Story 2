@@ -1,11 +1,9 @@
 USER STORY 2
 
-Story: 
+Story: After receiving mood data, user clicks a button to get movie recommendations (Fail1).
 
 Failure points:
 
-  Fail1: 
+  Fail1: Does not return movie recommendation - Error message and click the button to try again.
   
-  Fail2: 
-  
-  Fail3: 
+
