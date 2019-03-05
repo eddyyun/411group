@@ -1,6 +1,6 @@
 USER STORY 2
 
-Story: As a logged-in user with access to mood data, I want to search for movie recommendations that best fit the mood of 
+Story: As a logged-in user with access to analyzed mood data, I want to search for movie recommendations that best fit the mood of 
 my date.
 
 
