@@ -3,6 +3,8 @@ USER STORY 3
 Story: As a logged in user, I want to be able to view my personal user history that shows past pictures, moods and 
 movie recommendations in a list.
 
+Click profile button to view history (fail1,fail2). 
+
 Failure points:
 
   Fail1: No user history - show blank page with message "no user history"
