@@ -1,6 +1,10 @@
 USER STORY 2
 
-Story: After receiving mood data, user clicks a button to get movie recommendations (Fail1).
+Story: As a logged-in user with access to mood data, I want to search for movie recommendations that best fit the mood of 
+my date.
+
+
+User clicks a button to get movie recommendations (Fail1).
 
 Failure points:
 
