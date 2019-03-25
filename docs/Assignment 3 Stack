@@ -1,1 +1,4 @@
-
+We chose our stack after discussing different options and our experience with them. 
+Everyone in our group has experience with Python so we decided to use Python instead of all of us learning the syntax, etc... of a different language. 
+We chose MySQL because we thought a relational database would be best for our project in the long-term.
+Additionally, we chose DJango because it is pretty intuitive and easy to use since it is MVC. It also provides us with the full stack. 
