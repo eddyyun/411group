@@ -25,9 +25,6 @@ from django.conf import settings
 import shutil
 
 
-# Create your views here.
-
-# id_genre={0:28,1:12,2:16,3:35,4:80,5:99,6:18,7:10751,8:14,9:36,}
 
 
 def index(request):
@@ -71,7 +68,7 @@ def index(request):
         cv2.imwrite(file, camera_capture)
         del (camera)
 
-
+    ## File upload case 
     elif request.method=='POST':
         try:
             file = os.path.join(path_1, 'happy_pic.png')
@@ -84,7 +81,7 @@ def index(request):
         except:
             return HttpResponseRedirect('/')
 
-
+    ## if file is avaible send image to Google Vision API
     if os.path.isfile(file)==True:
         image_available=True
         client = vision.ImageAnnotatorClient()
@@ -117,12 +114,7 @@ def index(request):
             sor = ('sorrow: {}'.format(likelihood_name[face.sorrow_likelihood]))
             sorList = sor.split(':')
             emoDict[sorList[0]] = sorList[1]
-            # vertices = (['({},{})'.format(vertex.x, vertex.y)
-            #   for vertex in face.bounding_poly.vertices])
-            # print('face bounds: {}'.format(','.join(vertices)))
-
-        # print('emoDict')
-        print(emoDict)
+        
         newDict = dict()
         for x, y in emoDict.items():
             if (len(newDict) == 0 and y == ' VERY_LIKELY'):
@@ -139,8 +131,7 @@ def index(request):
 
         if (len(emoDict)==0):
             emotion_notavailable = True
-        # print('new dictionary')
-        # print(newDict)
+ 
         genreID = 0
         if "anger" in newDict:
             if (newDict['anger'] == ' VERY_LIKELY'):
@@ -167,7 +158,7 @@ def index(request):
 
         print("genreID is ", genreID)
 
-        #emotion=(newDict.popitem()[0]).capitalize()
+  
 
 
         url = "https://api.themoviedb.org/3/discover/movie"
@@ -253,23 +244,4 @@ def history(request):
 
     return render(request,'history.html',{'current_username':current_username,'history_available':history_available,'user_history_list':user_history_list})
 
-# def logout(request):
-#     logout(request)
-#     return HttpResponseRedirect('logout')
 
-# ID to genre mapping
-
-# url = "https://api.themoviedb.org/3/genre/movie/list"
-#
-#     querystring = {"api_key": "0acd56b735b6f3a20e5529e0c627e6e7", "language": "en-US"}
-#
-#     headers = {
-#         'Content-Type': "application/x-www-form-urlencoded",
-#         'cache-control': "no-cache",
-#         'Postman-Token': "2ea7f090-b3e6-448f-838a-88e897473928"
-#     }
-#
-#     response = requests.request("GET", url, headers=headers, params=querystring)
-#
-#
-#     json_data = json.loads(response.text)
