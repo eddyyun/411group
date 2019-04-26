@@ -7,7 +7,14 @@ Mohammad Ali Al-Rajjal (mohdali@bu.edu) , &nbsp; Michael Fedorovsky (mikefed@bu.
 
 
 ## Application Screenshots:
+### Login Page
+<img width="640" src="/Emotion_Login_Screenshot.png">
 
+### Home Page
+<img width="640" src="/Emotion_HomePage_Screenshot.png">
+
+### History Page
+<img width="640" src="/Emotion_HistroyPage_Screenshot.png">
 
 
 
