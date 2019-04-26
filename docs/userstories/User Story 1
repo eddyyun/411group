@@ -1,0 +1,17 @@
+USER STORY 1
+
+Story: As a logged-in user, I want to be able to take a photo of my date to find out my date's mood. 
+
+
+Ideally, after logging on (fail1), user clicks a button which allows them to take a photo (Fail2). User confirms the upload 
+and the app will return their date's mood (Fail3).
+
+Failure points:
+
+  Fail1: login fail - reset password
+  
+  Fail2: Can't take a photo - Retry button and upload from device
+  
+  Fail3: App doesn't return mood - User sees error message, try take another photo
+
+

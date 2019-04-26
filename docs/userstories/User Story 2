@@ -1,0 +1,13 @@
+USER STORY 2
+
+Story: As a logged-in user with access to analyzed mood data, I want to search for movie recommendations that best fit the mood of 
+my date.
+
+
+User clicks a button to get movie recommendations (Fail1).
+
+Failure points:
+
+  Fail1: Does not return movie recommendation - Error message and click the button to try again.
+  
+
