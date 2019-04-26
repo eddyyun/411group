@@ -1,0 +1,411 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+  <!--<meta charset="utf-8">-->
+
+
+<!--</head>-->
+<!--<body>-->
+    <!--<h1>CS411 Project</h1>-->
+    <!--<div>Done By: Mohammad Ali Al-Rajjal, Mike Fedorovsky, Eddy Yun, Stephen Mulyasasmita</div>-->
+    <!--<p></p>-->
+    <!--<form method="post" novalidate>-->
+     <!--{% csrf_token %}-->
+    <!--<button type="submit">Take Photo</button>-->
+    <!--</form>-->
+    <!--{% load static %}-->
+    <!--<img width="700" height="400" src="{% static '/images/happy_pic.png' %}"/>-->
+
+<!--</body>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<title>Emotion</title>-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="app.css">-->
+<!--</head>-->
+<!--<body>-->
+	<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+		<!--<a class="navbar-brand" href="#">Emotion</a>-->
+	  	<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+	    	<!--<span class="navbar-toggler-icon"></span>-->
+	  	<!--</button>-->
+    	<!--<ul class="navbar-nav mr-auto">-->
+	    <!--</ul>-->
+	    <!--<ul class="navbar-nav">-->
+	    	<!--<li class="nav-item active">-->
+	        	<!--<a class="nav-link" href="#">Home</a>-->
+	      	<!--</li>-->
+	      	<!--<li class="nav-item">-->
+	        	<!--<a class="nav-link" href="#">History</a>-->
+	      	<!--</li>-->
+	      	<!--<li class="nav-item">-->
+	        	<!--<a class="nav-link" href="#">Logout</a>-->
+	      	<!--</li>-->
+    	<!--</ul>-->
+  	<!--</nav>-->
+
+  	<!--<div class="split left">-->
+	  	<!--<div class="sub_left">-->
+	    	<!--<img src="https://www.materialui.co/materialIcons/action/face_black_192x192.png" alt="Avatar woman">-->
+	    	<!--<p>Access Camera</p>-->
+            <!--<form method="post" novalidate>-->
+                <!--{% csrf_token %}-->
+                <!--<button type="submit" class="btn btn-dark" id="cameraBtn">Take a photo</button>-->
+            <!--</form>-->
+	  	<!--</div>-->
+        <!--<div class="sub_right">-->
+	    	<!--<img src="https://www.materialui.co/materialIcons/action/face_black_192x192.png" alt="Avatar man">-->
+	    	<!--<p>Upload Image</p>-->
+	    	<!--<button class="btn btn-dark" id="uploadBtn">Upload</button>-->
+            <!--<img width="200" height="200" src="{{backdrop_1}}"/>-->
+	  	<!--</div>-->
+	<!--</div>-->
+
+	<!--<div class="split right">-->
+        <!--<p style="font-size:30px;text-align:center">Results</p>-->
+           <!--{% load static %}-->
+    <!--<img width="750" height="350" src="{% static '/images/happy_pic.png' %}"/>-->
+    <!--<p style="text-align:center">Emotion:</p>-->
+	<!--<div>{{emotion}}</div>-->
+    <!--<div>Below are 3 movies we suggest you watch on your date</div>-->
+    <!--<div>{{movie_1}}</div>-->
+    <!--<div>{{movie_2}}</div>-->
+    <!--<div>{{movie_3}}</div>-->
+	<!--</div>-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/cs411_project/dateapp/static/app.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+	 {% if user.is_authenticated %}
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Emotion</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="navbar-nav mr-auto">
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="{% url 'index'%}">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'history'%}">History</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'logout'%}">Logout</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="split left">
+			<div class = "cameraLabel"style="text-align:left;font-size:20px;margin-top:0px;">Logged in as: {{current_username}}</div>
+			{% if image_available %}
+			{% load static %}
+			<img class= "cameraPictureBorder" src="{% static '/images/happy_pic.png' %}">
+			{% else %}
+			<img class= "cameraPictureBorder" src="https://www.materialui.co/materialIcons/action/face_black_192x192.png">
+			{% endif %}
+			<!--<p class = "cameraLabel" >Access Camera</p>-->
+			 <form method="post" novalidate>
+			{% csrf_token %}
+			<input type="hidden" name="take_photo"/>
+			<button class="btn btn-dark" type='submit' id="cameraBtn">Take a photo</button>
+			</form>
+			<p></p>
+			<p style="text-align:center">OR</p>
+			<form method="post" enctype="multipart/form-data">
+				 {% csrf_token %}
+				<input type="file" name="document">
+				<button class="btn btn-dark" type="submit">Upload file</button>
+			</form>
+
+		</div>
+
+		<div class="split right">
+			{% if emotion_notavailable %}
+				<p class = "cameraLabel"style="text-align:center;margin-top: 290px;font-size:50px;color:red;">Failed to retrieve emotion! Please Try  Again</p>
+			{% elif image_available %}
+				<div class="moodParentDiv">
+					<div class="moodResult">
+						Emotion : {{emotion}}
+					</div>
+				</div>
+				<div class="movieParentDiv">
+					<div class="movies">
+						<div class="movieTitle">{{movie_1}}</div>
+						<img class="moviesImg" src="{{backdrop_1}}">
+					</div>
+					<div class="movies">
+						<div class="movieTitle">{{movie_2}}</div>
+						<img class="moviesImg" src="{{backdrop_2}}">
+					</div>
+					<div class="movies">
+						<div class="movieTitle">{{movie_3}}</div>
+						<img class="moviesImg" src="{{backdrop_3}}">
+					</div>
+				</div>
+
+			{% else %}
+				<p class = "cameraLabel"style="text-align:center;margin-top: 290px;font-size:50px">Results will appear here</p>
+
+			{% endif %}
+
+		</div>
+	 {% else %}
+	 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Emotion</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+    	<ul class="navbar-nav mr-auto">
+	    </ul>
+	 <div class="split left" style="width: 100%;">
+		 <p class = "cameraLabel"style="text-align:center;margin-top: 100px;font-size:50px">Emotion</p>
+		 <p class = "cameraLabel"style="text-align:center;margin-top: 30px;font-size:30px">CS 411 Project</p>
+		 <div class="form-group" id="loginContainer">
+			 <a class="btn btn-dark" style="margin-top:110px;" href="{% url 'social:begin' 'google-oauth2' %}">
+        	Login with Google
+		  </a>
+		 </div>
+			 <div id="iconContainer">
+  			<img src="https://www.materialui.co/materialIcons/action/face_black_192x192.png" alt="Avatar woman">
+		  </div>
+		  <p class = "cameraLabel"style="text-align:center;margin-top: 300px;font-size:20px">Done By: Mohammad Ali Al-Rajjal, Mike Fedorovsky, Eddy Yun, Stephen Mulyasasmita</p>
+
+
+    {% endif %}
+
+</body>
+</html>
+
+
+
+
+<!--<script>-->
+   <!--function startTimer(){-->
+	  <!--var counter = 5;-->
+	  <!--setInterval(function() {-->
+		<!--counter&#45;&#45;;-->
+		<!--if (counter >= 0) {-->
+		  <!--span = document.getElementById("count");-->
+		  <!--span.innerHTML = counter;-->
+		<!--}-->
+		<!--if (counter === 0) {-->
+			<!--alert('sorry, out of time');-->
+			<!--clearInterval(counter);-->
+		<!--}-->
+	  <!--}, 1000);-->
+   <!--}-->
+   <!--$("#myform").submit(function(){-->
+    	<!--startTimer();-->
+   <!--});-->
+
+<!--</script>-->
+
+
+
+
+
+
+
+<style>
+#loginContainer {
+	position: absolute;
+    top: 50%;
+    left: 65%;
+    margin-top: -150px;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+}
+
+#iconContainer{
+	position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+}
+
+#signInDiv{
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px
+}
+
+#usernameDiv{
+	width: 100%;
+	margin-top: 30px
+}
+#usernameDiv > input{
+	width:100%;
+}
+
+#passwordDiv{
+	width: 100%;
+	margin-top: 10px;
+}
+#passwordDiv > input{
+	width:100%;
+}
+
+#signInBtn{
+	width: 100%;
+	margin-top: 30px;
+}
+
+/*********************************   HOME   *****************************************/
+/* Split the screen in half */
+.split {
+	margin-top: 55px;
+  	height: 100%;
+  	width: 50%;
+  	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #bfbfbf;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #dddddd;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.cameraPictureBorder {
+  height: 50%;
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0%;
+  border: 10px solid black;
+}
+.cameraLabel {
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: :0%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#cameraBtn{
+  margin-top: 5%;
+  width: 30%;
+  margin-left: 35%;
+}
+
+.moodParentDiv{
+  width: 100%;
+  height: 20%;
+  background-color: grey;
+  margin: 0 auto;
+}
+.moodResult{
+  height: 100%;
+  width: 100%;
+  padding-top: 55px;
+  padding-left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.movieParentDiv{
+  width: 100%;
+  height: 80%;
+  background-color: black;
+}
+.movieTitle{
+  width: 100%;
+  height: 20%;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+
+/*********************************   HISTORY  *****************************************/
+
+
+.history{
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.date_info{
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+    vertical-align:top;
+}
+.movies{
+    width: 32.8%;
+    height:100%;
+    display: inline-block;
+    background-color: black;
+}
+.moviesImg{
+  width:auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.date{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+
+</style>
+

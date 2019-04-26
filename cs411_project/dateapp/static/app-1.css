@@ -1,0 +1,177 @@
+#loginContainer {
+	position: absolute;
+    top: 50%;
+    left: 65%;
+    margin-top: -150px;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+}
+
+#iconContainer{
+	position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+}
+
+#signInDiv{
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px
+}
+
+#usernameDiv{
+	width: 100%;
+	margin-top: 30px
+}
+#usernameDiv > input{
+	width:100%;
+}
+
+#passwordDiv{
+	width: 100%;
+	margin-top: 10px;
+}
+#passwordDiv > input{
+	width:100%;
+}
+
+#signInBtn{
+	width: 100%;
+	margin-top: 30px;
+}
+
+/*********************************   HOME   *****************************************/
+/* Split the screen in half */
+.split {
+	margin-top: 55px;
+  	height: 100%;
+  	width: 50%;
+  	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #bfbfbf;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #dddddd;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.cameraPictureBorder {
+  height: 50%;
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0%;
+  border: 10px solid black;
+}
+.cameraLabel {
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: :0%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#cameraBtn{
+  margin-top: 5%;
+  width: 30%;
+  margin-left: 35%;
+}
+
+.moodParentDiv{
+  width: 100%;
+  height: 20%;
+  background-color: grey;
+  margin: 0 auto;
+}
+.moodResult{
+  height: 100%;
+  width: 100%;
+  padding-top: 55px;
+  padding-left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.movieParentDiv{
+  width: 100%;
+  height: 80%;
+  background-color: black;
+}
+.movieTitle{
+  width: 100%;
+  height: 20%;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+
+/*********************************   HISTORY  *****************************************/
+
+
+.history{
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.date_info{
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+    vertical-align:top;
+}
+.movies{
+    width: 32.8%;
+    height:100%;
+    display: inline-block;
+    background-color: black;
+}
+.moviesImg{
+  width:auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.date{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+

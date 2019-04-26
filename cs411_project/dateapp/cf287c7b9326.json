@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "balmy-access-237423",
+  "private_key_id": "cf287c7b932677fa719418626d5a327672921ede",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcjW4hCEogj6xW\n2dqSn64X3B0F4VXptt8orOgl3ju/FkSHyYnofjvixWVKhLFNCXo1bg48qwx+TCmB\nfaH8cK5Y8QPT/LUYkSS18/CMjJM6fkCu1awHn30KM7YqULd4z01+DTjKhQ6c/GVk\nBam9oD3XAiVoS/JTj+aTbnIP1OwXGA6lGk60EKOnmWaixIndCQC4QxralRg3IZHB\naEEfLzmUJi0fNZGS4mmvHpbTJHq6HZfQimXxTlNhzMUhLhht0/LTbRQ/Pboo1DAb\n/r/vmRTiSe4/MZvK3oHpyozld8iL6QepO0+7Ybvkwhv9OLg1Ov2BOcERLiRfVskq\nuMXrPK9JAgMBAAECggEABQiy6hUlg1gZEYEFH+JKcAj5H15aooMyyoeLGgnEJHyl\nLMYJMbSWAav01YA7zm0jO6dPGFEIBQbJgE/OYUi+k5pKr29K48Agw7Z5uOfUk0cB\nBHUOCG2TYzw8lxvi6UldM3inOeosrcMt7XSDKY5QB+M+/kIQERepjMOoMbaPGuc8\nkskijSINc84HN1nNmD4Sa7itXawdsYrs4TZqQyV3DpnPPuiHOM5X6BAK8f+Js87i\n+meTfcQ/POXqnJI+/alZhPpIr+FQKWa4QlfXAmTMjLdi5npt4+XYQhAi1izLzS8g\n5ikSNBhqqeELunlfNqybDSlGtW+qeLCQaJO/+aLw2wKBgQDY6Eu2XjCiBRio7Xil\np0RveaERR5ue513YLADro2wK0jimV+r4ZtZ7ZtaKgtCZbm4gwqidORXI8LSbxmSi\n4yEDOmFFpizht9zK4OkMpX0qcYXuHAuzdE0UPboz4HhA/61P+EYZ70DXEhe8PZ4j\nJsekCkOL4itdA6X0GSY6HIAjBwKBgQC4xHg3lo8J8FAK7nwZaZEwGFiwJiYSscin\nfhQbPEMO4yR/QUiw3zhvjmg4xSqoKsVmkS1QOQMLyDg2qHkKgzQ4R9x2UsgKJvuM\ntDI2vHzUDT9L4O/FFjmY7g6owkORwSMkgpmNpCxcCUDvNEosyXjtbbln5sNpnHPC\nfb9tI6J3LwKBgQC+wex0Afn7Q0ggqFfGN4h0ER+ZtsQhx5A8oNZeZWaLTb4MbJ10\nv9w4woRDZDBX/0pS/V6UhrOl+CqeJKg0qFNMJ3eMbUxjZfODaLEMMi4Vuajzcy7H\nL6zp9C9hmDOp1jFxdwMPo93+RycgoYAFogFJPs2Qo+NG9gJo3gVEbfQy2QKBgGVP\nnVdln7LkaQ9FaxiIEQsdHmwfztqLTym/8QhqB57/H0EDq/cHvqs0m6MdQWGKakju\nK7mEOU5Zj7EwuYXxIU4G4TSj+XnPnDiviaUHvy6KwP07Ll2T7SsUxUb1lhUyoLFh\nRw8qSQSCMm+27UEXi84sTvBQ0S90kOjBCJiwZGITAoGAY4S+DIExeEMBYpn8eX3N\nw332fnteCrAQfffbkUWDyNjSl7NnR+hhwqTdFCL4zN7W3N4/DEixXT9RHMqGw/xU\nZpAUDyXDtOvoWgwTM+9m/mhVfxU0+u4ajpnNf2b5abbbt+ZvJ5VAhOe5cZRut21x\neyx2/R+fpaudFFkmu+a9H9I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-vision-sa@balmy-access-237423.iam.gserviceaccount.com",
+  "client_id": "107277984426411843390",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-vision-sa%40balmy-access-237423.iam.gserviceaccount.com"
+}
