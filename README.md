@@ -1,9 +1,13 @@
-# 411group
+# CS 411 Project 
 
-Al-Rajjal,Mohammad Ali
+This is our CS 411 Final Project. Our web application "Emotion" is written in python3 using the Django Web Framework and a MySQL databse 
 
-Fedorovsky,Michael
+## Team Information:
+Mohammad Ali Al-Rajjal (mohdali@bu.edu) , &nbsp; Michael Fedorovsky (mikefed@bu.edu) , &nbsp; Stephen Mulyasasmita (smulya@bu.edu) , &nbsp; Edward Yun (eyun@bu.edu)
 
-Mulyasasmita,Stephen 
 
-Yun,Edward
+## Application Screenshots:
+
+
+
+
