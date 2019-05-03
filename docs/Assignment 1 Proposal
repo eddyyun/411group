@@ -2,7 +2,7 @@ This is our proposal
 
 Proposal 1
 The web application will serve as a recommendation tool for people looking to watch a movie. Using a picture posted by
-the user, the web app will send the image to Google Vision API to detect and return the emotion detected for that particular 
+the user or taken using the webcam, the web app will send the image to Google Vision API to detect and return the emotion detected for that particular 
 person. The web app will then send these emotions to The Movie Database API to obtain recommendations on the
 appropriate movies.
 
