@@ -3,7 +3,7 @@ USER STORY 3
 Story: As a logged in user, I want to be able to view my personal user history that shows past moods and 
 movie recommendations in a list.
 
-Click Histroy page to view history (fail1,fail2). 
+Click History page to view history (fail1,fail2). 
 
 Failure points:
 
