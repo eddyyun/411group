@@ -1,4 +1,4 @@
 We chose our stack after discussing different options and our experience with them. 
 Everyone in our group has experience with Python so we decided to use Python instead of all of us learning the syntax, etc... of a different language. 
-We chose MySQL because we thought a relational database would be best for our project and MySQL works well with python web frameworks.
+We chose MySQL because we thought a relational database would be best for our project and MySQL works well with python web frameworks (through an ORM).
 Additionally, we chose Django as our web framework because it is pretty intuitive (maps easily to MVC). It also provides us with the full stack (front-end and back-end) on one platform. 
